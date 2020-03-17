@@ -37,6 +37,9 @@ class Pixel:
         if isinstance(other, Pixel):
             self.x += other.x
             self.y += other.y
+        elif isinstance(other, tuple):
+            self.x += other[0]
+            self.y += other[1]
         else:
             self.x += other
             self.y += other
